@@ -33,15 +33,29 @@ class MainController extends Controller {
     }
 
     public function postAction() {
+
         $adminModel = new Admin;
         if(!$adminModel->isPostExists($this->route['id'])) {
             $this->view->errorCode(404);
         }
             $vars = [
                 'data' => $adminModel->postData($this->route['id'])[0],
+                'comments_list' => $this->model->commentsList($this->route['id']),
             ];
-
+        if(!empty($_POST)) {
+            if (!$this->model->postCommentValidate($_POST)){
+                $this->view->message('error', $this->model->error);
+            } else {
+                    $id = $this->model->postCommentGet($_POST, $this->route['id']);
+                    if(!$id){
+                        $this->view->message('success', 'Ошыбка обработки запроса');
+                    }
+                $this->view->message('success', 'Сообщение отправлено');
+            }
+        }
         $this->view->render('Пост', $vars);
     }
+
+
 
 }

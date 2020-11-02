@@ -22,10 +22,13 @@ return [
         'action' => 'contact',
     ],
 
+
     'post/{id:\d+}' => [
         'controller' => 'main',
         'action' => 'post',
     ],
+
+
 
     // AdminController
 

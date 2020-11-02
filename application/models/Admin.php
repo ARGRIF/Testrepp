@@ -99,4 +99,7 @@ class Admin extends Model
         return $this->db->row('SELECT * FROM posts WHERE id = :id', $params);
     }
 
+
+
+
 }

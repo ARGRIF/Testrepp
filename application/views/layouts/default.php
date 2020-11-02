@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title><?php echo $title; ?></title>
         <link href="/public/styles/bootstrap.css" rel="stylesheet">
+        <link href="/public/styles/comments.css" rel="stylesheet">
         <link href="/public/styles/main.css" rel="stylesheet">
         <link href="/public/styles/font-awesome.css" rel="stylesheet">
         <script src="/public/scripts/jquery.js"></script>
@@ -32,7 +33,7 @@
             </div>
         </nav>
         <?php echo $content; ?>
-        <hr>
+
         <footer>
             <div class="container">
                 <div class="row">

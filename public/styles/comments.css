@@ -1,0 +1,34 @@
+.img-sm {
+    width: 46px;
+    height: 46px;
+}
+.panel {
+    box-shadow: 0 2px 0 rgba(0,0,0,0.075);
+    border-radius: 0;
+    border: 0;
+    margin-bottom: 15px;
+}
+
+.panel-body {
+    padding-top: 25px;
+}
+
+.btn-trans {
+    background-color: transparent;
+    border-color: transparent;
+    color: #929292;
+}
+
+.btn-sm {
+    padding: 5px 10px !important;
+}
+.mar-top {
+    margin-top: 15px;
+}
+.media .media-body{
+    margin-top: 1rem!important;
+}
+
+.media-body p {
+    margin: 10px 0 !important;
+}
